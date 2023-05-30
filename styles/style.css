@@ -1,0 +1,387 @@
+@import url("fonts/style.css");
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;700&display=swap");
+@import url("https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css");
+@media (max-width: 1280px) {
+  .swiper {
+    max-width: 1000px;
+  }
+  .content-sidebar {
+    max-height: 80%;
+  }
+}
+
+/*Основные стили*/
+* {
+  font-family: "Catamaran", sans-serif;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  background-color: #10100e;
+}
+body,
+html {
+  height: 100vh;
+  width: 100vw;
+  overflow-y: hidden;
+}
+.content {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 0.1fr 1fr;
+  height: 100%;
+  gap: 25px;
+}
+
+/*Стили для сайдбара*/
+.content-sidebar {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.content-sidebar__list {
+  list-style: none;
+}
+.content-sidebar__item {
+  margin-top: 30px;
+}
+.content-sidebar__link {
+  display: block;
+  width: 35px;
+  height: 35px;
+  padding: 1%;
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center center;
+  margin: 0 auto;
+  border-radius: 30px;
+}
+.content-sidebar__link:hover {
+  transition-duration: 0.8s;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.content-sidebar__inner {
+  margin-bottom: 40px;
+}
+
+/*Ссылки на иконки сайдбара*/
+.content-sidebar__burger {
+  background-image: url(../img/menu-burger.png);
+}
+.content-sidebar__home {
+  background-image: url(../img/sidebar__home.png);
+}
+.content-sidebar__compass {
+  background-image: url(../img/sidebar__movie.png);
+}
+.content-sidebar__favorite {
+  background-image: url(../img/sidebar__favorite.png);
+}
+.content-sidebar__paper {
+  background-image: url(../img/sidebar__paper.png);
+}
+.content-sidebar__movie {
+  background-image: url(../img/sidebar__compass.png);
+}
+.content-sidebar__back {
+  background-image: url(../img/sidebar__back.png);
+}
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/*Стили для шапки сайта*/
+.content-header {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 60px;
+}
+.content-header__1stblock {
+  display: flex;
+  align-items: center;
+}
+
+/*Стили для логотипа*/
+.content-header__logo {
+  display: block;
+  width: 200px;
+  height: 100px;
+  background-image: url(../img/logo2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 30px;
+}
+.content-header__list {
+  display: flex;
+}
+.content-header__item {
+  margin-right: 40px;
+}
+.content-header__link {
+  color: #fff;
+  font-weight: 600;
+}
+
+/*Блок с частью для личного кабинета*/
+.content-header__lk {
+  display: flex;
+  align-items: center;
+}
+.content-header__lk-links {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center center;
+  margin-right: 30px;
+  cursor: pointer;
+}
+.content-header__lk-links:last-child {
+  margin: 0;
+}
+
+/*Пути изображений для личного кабинета*/
+.content-header__lupa {
+  background-image: url(../img/header__lupa.png);
+}
+.content-header__msg {
+  background-image: url(../img/header__msg.png);
+}
+.content-header__profile {
+  background-image: url(../img/header__profile.png);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-size: 50px;
+}
+.hidden_lk {
+  background-image: url(../img/not_registred.png);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-size: 50px;
+}
+
+/*Стили для контент части сайта*/
+.content-main {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  margin-right: 30px;
+}
+/*Стили для свайпера*/
+.swiper {
+  height: 95%;
+  width: 160vh;
+  border-radius: 50px;
+  margin: 0 auto;
+}
+.st {
+  background-image: url(../img/slide5_bg.png);
+  background-size: cover;
+  text-align: center;
+}
+.nd {
+  background-image: url(../img/slide2_bg.png);
+  background-size: cover;
+  text-align: center;
+}
+.th {
+  background-image: url(../img/slide3_bg.png);
+  background-size: cover;
+  text-align: center;
+}
+.fourth {
+  background-image: url(../img/slide4_bg.png);
+  background-size: cover;
+  text-align: center;
+}
+.fifth {
+  background-image: url(../img/slide1_bg.png);
+  background-size: cover;
+  text-align: center;
+}
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.swiper__block {
+  background-color: #10100e;
+  border-radius: 30px;
+  padding: 2%;
+  margin-bottom: 10px;
+}
+.swiper__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1%;
+  width: 200px;
+  height: 60px;
+  color: #fff;
+  background-color: rgb(12, 115, 254);
+  transition-duration: 0.8s;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.swiper__button:hover {
+  background: rgba(12, 115, 254);
+  border-radius: 30px;
+  transition-duration: 0.8s;
+}
+.swiper__button::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 24px;
+  overflow: hidden;
+  background-image: url(../img/watch.png);
+  transition: width 200ms, margin-left 200ms;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.swiper__button:is(:hover, :focus)::after {
+  width: 24px;
+  margin-left: 8px;
+}
+
+/*Модальное окно*/
+.modalbox {
+  position: fixed;
+  top: 95px;
+  right: 35px;
+  z-index: 1;
+  background-color: #10100e;
+  padding: 2%;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.8s ease 0s;
+}
+.modalbox:target {
+  opacity: 1;
+  visibility: visible;
+}
+.modalbox__list {
+  margin-right: 15px;
+}
+.modalbox__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 200px;
+  height: 40px;
+  padding: 4%;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.modalbox__container {
+  display: flex;
+  justify-content: space-between;
+}
+.modalbox__quit {
+  width: 15px;
+  height: 15px;
+  background-image: url(../img/close.png);
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-size: 15px;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+}
+.modalbox__quit:hover {
+  transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.modalbox__link {
+  color: #fff;
+}
+.modalbox__item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition-duration: 0.8s;
+  border-radius: 30px;
+}
+
+/*Главная страница сайта*/
+.main__block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-size: 34px;
+}
+.main__title {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto;
+  color: white;
+}
+.main__subtitle {
+  display: flex;
+  justify-content: center;
+  color: white;
+  opacity: 0.8;
+  font-size: 24px;
+}
+.container__video {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 99%;
+  height: auto;
+  filter: brightness(10%);
+  z-index: 1;
+}
+.main_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 30px auto;
+  padding: 1%;
+  width: 300px;
+  height: 60px;
+  color: #fff;
+  background-color: rgb(12, 115, 254);
+  transition-duration: 0.8s;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.main_button:hover {
+  background: rgba(12, 115, 254);
+  border-radius: 30px;
+  transition-duration: 0.8s;
+}
+.main_button::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 24px;
+  overflow: hidden;
+  background-image: url(../img/play.png);
+  transition: width 200ms, margin-left 200ms;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.main_button:is(:hover, :focus)::after {
+  width: 24px;
+  margin-left: 8px;
+}

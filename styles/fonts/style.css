@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Qanelas Soft';
+    src: local('Qanelas Soft Heavy'), local('Qanelas-Soft-Heavy'),
+        url('Qanelas-Heavy.woff2') format('woff2'),
+        url('Qanelas-Heavy.woff') format('woff'),
+        url('Qanelas-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+  }
